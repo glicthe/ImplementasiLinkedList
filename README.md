@@ -27,8 +27,12 @@ Membuat ADT Link-List Mahasiwa (Nama, Nilai UTS SDA) dengan langkah berikut:
 10) Tampilkan elemen List L2 yang baru
 11) Hapus List L1 dan List L2
 
-Note: a. Gunakan fungsi-fungsi pada string.h
-      b. Contoh definisi list di source code:
+Note: 
+1) Gunakan fungsi-fungsi pada string.h
+2) Contoh definisi list di source code:
+
+Contoh:
+       
       typedef int infotype;
       typedef struct tElmtlist *address;
       typedef struct tElmtlist {
@@ -36,10 +40,10 @@ Note: a. Gunakan fungsi-fungsi pada string.h
           address next;
       } Elmtlist
 
-      //Definisi List 
-      //List Kosong ===> First(L) = Nil
-      //Setiap elemen dengan address P dapat diacu info(p) dan Next(p);
-      //Elemen terakhir List ===> Jika addresnya Last maka Next(Last) = Nil 
+      // Definisi List 
+      // List Kosong ===> First(L) = Nil
+      // Setiap elemen dengan address P dapat diacu info(p) dan Next(p);
+      // Elemen terakhir List ===> Jika addresnya Last maka Next(Last) = Nil 
       typedef struct {
           address First;
       } List
