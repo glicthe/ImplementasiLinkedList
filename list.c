@@ -57,9 +57,10 @@ void tampilkanMenu() {
     printf("3. Tampilkan L1 (Urut Nilai)\n");
     printf("4. Salin ke L2 (Nilai > 70)\n");
     printf("5. Tampilkan L2\n");
-    printf("6. Hapus Duplikat di L2\n");
-    printf("7. Hapus Semua List\n");
-    printf("8. Keluar\n");
+    printf("6. Hitung Jumlah Mahasiswa\n");
+    printf("7. Hapus Duplikat di L2\n");
+    printf("8. Hapus Semua List\n");
+    printf("9. Keluar\n");
     printf("Pilihan: ");
 }
 

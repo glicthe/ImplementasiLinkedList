@@ -50,12 +50,19 @@ int main() {
                 break;
             }
             case 6: {
+				printf("\n=== JUMLAH MAHASISWA ===\n");
+                printf("Jumlah di L1: %d\n", countElements(L1));
+                printf("Jumlah di L2: %d\n", countElements(L2));
+                waitForEnter();
+                break;
+            }
+            case 7: {
                 removeDuplicates(&L2);
                 printf("\nDuplikat nama di L2 telah dihapus");
                 waitForEnter();
                 break;
             }
-            case 7: {
+            case 8: {
                 printf("\nYakin ingin menghapus semua data? (y/n): ");
                 scanf("%c", &konfirmasi);
                 if(tolower(konfirmasi) == 'y') {
@@ -68,7 +75,7 @@ int main() {
                 waitForEnter();
                 break;
             }
-            case 8: {
+            case 9: {
                 printf("\nTerima kasih ngab dah nyoba!\n");
                 break;
             }
@@ -77,7 +84,7 @@ int main() {
                 waitForEnter();
             }
         }
-    } while(pilihan != 8);
+    } while(pilihan != 9);
 
     // Membersihkan memori menggunakan destructor
     deleteList(&L1);
