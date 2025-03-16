@@ -4,6 +4,7 @@ Pengerjaan Studi Kasus SDA Linked List
 Dengan Ketentuan Sebagai Berikut:
 
 ========PRAKTIKUM PENGGUNAAN SINGLE LINKED LIST========
+
 Membuat ADT Link-List Mahasiwa (Nama, Nilai UTS SDA) dengan langkah berikut:
 1) Buat ADT Link-List Mahasiswa (.h) dan (.c) dengan memodifikasi ADT Liniear linked List.
    Sebuah ADT minimal mengandung 5 fungsi utama (5 sekawan):
