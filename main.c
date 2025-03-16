@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include "list.h"
+
+int main() {
+    // Inisialisasi list menggunakan constructor
+    List L1 = createList();
+    List L2 = createList();
+    
+    int pilihan;
+    char konfirmasi;
+
+    do {
+        tampilkanMenu();
+        scanf("%d", &pilihan);
+        clearBuffer();
+
+        switch(pilihan) {
+            case 1: {
+                inputMahasiswa(&L1);
+                waitForEnter();
+                break;
+            }
+            case 2: {
+                printf("\n=== LIST L1 (Urut Nama) ===\n");
+                printList(L1);
+                waitForEnter();
+                break;
+            }
+            case 3: {
+                printf("\n=== LIST L1 (Urut Nilai) ===\n");
+                sortByNilai(L1);
+                waitForEnter();
+                break;
+            }
+            case 4: {
+                deleteList(&L2);
+                L2 = createList();
+                copyHighScore(L1, &L2);
+                printf("\nData dengan nilai >70 telah disalin ke L2");
+                waitForEnter();
+                break;
+            }
+            case 5: {
+                printf("\n=== LIST L2 ===\n");
+                printList(L2);
+                waitForEnter();
+                break;
+            }
+            case 6: {
+                removeDuplicates(&L2);
+                printf("\nDuplikat nama di L2 telah dihapus");
+                waitForEnter();
+                break;
+            }
+            case 7: {
+                printf("\nYakin ingin menghapus semua data? (y/n): ");
+                scanf("%c", &konfirmasi);
+                if(tolower(konfirmasi) == 'y') {
+                    deleteList(&L1);
+                    deleteList(&L2);
+                    L1 = createList();
+                    L2 = createList();
+                    printf("Semua data telah dihapus");
+                }
+                waitForEnter();
+                break;
+            }
+            case 8: {
+                printf("\nTerima kasih ngab dah nyoba!\n");
+                break;
+            }
+            default: {
+                printf("\nPilihan tidak valid!");
+                waitForEnter();
+            }
+        }
+    } while(pilihan != 8);
+
+    // Membersihkan memori menggunakan destructor
+    deleteList(&L1);
+    deleteList(&L2);
+    return 0;
+}
